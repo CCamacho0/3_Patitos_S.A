@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using _3_Patitos_S.A.Controllers;
+using _3_Patitos_S.A.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace _3_Patitos_S.A.Data
 {
@@ -9,7 +11,9 @@ namespace _3_Patitos_S.A.Data
 
         }
 
-        //Aca se crean los contructores de los modelos
-
+        public DbSet<Persona> Persona { get; set; }
+        public DbSet<Categoria> Categoria { get; set;}
+        public DbSet<Rol> Rol { get; set;}
+        public DbSet<Estado_Usuario> Estado_Usuario { get;set; }
     }
 }

@@ -1,0 +1,151 @@
+﻿@model _3_Patitos_S.A.Models.Persona
+@{
+    ViewData["Title"] = "Mantenimiento Personas";
+}
+<!-- Show persona-->
+<div class=" row mb-5">
+    <div class="offset-12">
+        <div class="card border">
+            <div class=" d-flex card-header bg-black justify-content-between ">
+                <h4 class="text-white"><strong>Mantenimiento de Personas</strong></h4>
+
+                <button id="btnAddP" class="btn btn-primary" type="button"><i class="bi bi-person-fill-add"></i> Persona</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="tblPersonas" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id de la Persona</th>
+                                <th>Rol </th>
+                                <th>Nombre Completo</th>
+                                <th>Direccion</th>
+                                <th>Telefono</th>
+                                <th>Correo</th>
+                                <th>Estado del usuario</th>
+                                <th>Categoria</th>
+                                <th>Opciones </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var p in ViewBag.ListPersona)
+                            {
+                                <tr>
+                                    <td>@p.Id_Persona </td>
+                                    <td>@p.Nombre_Rol</td>
+                                    <td>@p.Nombre_Persona</td>
+                                    <td>@p.Direccion</td>
+                                    <td>@p.Telefono</td>
+                                    <td>@p.Correo</td>
+                                    <td>@p.Nombre_estado</td>
+                                    <td>@p.Nombre_categoria</td>
+                                    <td class=" d-flex justify-content-end">
+                                        <button type="button" onclick="EditPersona(@p.Id_Persona)" class="btn btn-warning m-1 btn-sm" data-bs-toggle="modal"><i class="bi bi-pencil-square"></i> Editar</button>
+                                        <button type="button" onclick="DelConfirm(@p.Id_Persona)" class="btn btn-danger m-1 btn-sm" data-bs-toggle="modal" data-bs-target="#DeleteModal"><i class="bi bi-trash3"></i> Eliminar</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Delete persona-->
+<div class="modal fade" id="DeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Eliminar Persona</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <input id="idDel_Persona" class="form-control" asp-for="Id_Persona" type="hidden" />
+                    ¿Está Seguro de eliminar a la persona?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btnDelPersona" type="button" class="btn btn-danger">Eliminar</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<!-- Edit persona-->
+<div class="modal fade" id="EditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Editar Persona</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="UpdatePersona" method="post" id="EditForm">
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Id de la Persona</label>
+                        <input id="id_persona" class="form-control" asp-for="Id_Persona" type="number" readonly />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Seleccione el Rol</label>
+                        @Html.DropDownListFor(r => r.Rol, (SelectList)ViewBag.ListRol, new { @class = "form-select", @id="id_r" })
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Nombre Completo</label>
+                        <input asp-for="Nombre_Persona" id="nombre" class="form-control" type="text"/>
+                        <span asp-validation-for="Nombre_Persona" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Dirección</label>
+                        <textarea id="dir" class="form-control" asp-for="Direccion">></textarea>
+                        <span asp-validation-for="Direccion" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Numero de Telefono</label>
+                        <input id="telefono" class="form-control" asp-for="Telefono" type="number" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Correo</label>
+                        <input id="email" class="form-control" asp-for="Correo" type="email" />
+                        <span asp-validation-for="Correo" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Contraseña</label>
+                        <input id="contrasena" class="form-control" asp-for="Contrasena" type="password" />
+                        <span asp-validation-for="Contrasena" class="text-danger"></span>
+                    </div>
+                    <div class="form-group d-flex">
+                        <div class="form-group col-5 m-3">
+                            <label class="col-form-label">Seleccione el estado</label>
+                            @Html.DropDownListFor(r => r.Id_Estado_Usuario, (SelectList)ViewBag.EstadoUsuario, new { @class = "form-select", @id="id_e" })
+                        </div>
+
+                        <div class="form-group col-5 m-3">
+                            <label class="col-form-label ">Seleccione la Categoria</label>
+                            @Html.DropDownListFor(r => r.Id_Categoria, (SelectList)ViewBag.Categoria, new { @class = "form-select", @id="id_c" })
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="btnEditPersona" type="submit" class="btn btn-warning">Guardar cambios</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
