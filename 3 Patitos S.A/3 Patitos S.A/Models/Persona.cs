@@ -16,11 +16,11 @@ namespace _3_Patitos_S.A.Models
         [Required(ErrorMessage = "La direccion es un campo obligatorio")]
         public string? Direccion { get; set; }
 
-        [Required(ErrorMessage = "La numero de telefono es un campo obligatorio")]
+        [Required(ErrorMessage = "El numero de telefono es un campo obligatorio")]
         public int Telefono { get; set; }
 
         [Required(ErrorMessage = "El correo electronico es un campo obligatorio")]
-        public string? Correo { get; set; }
+        public string? Correo { get; set; } 
 
         [Required(ErrorMessage = "La contraseña es un campo obligatorio")]
         public string? Contrasena { get; set; }
