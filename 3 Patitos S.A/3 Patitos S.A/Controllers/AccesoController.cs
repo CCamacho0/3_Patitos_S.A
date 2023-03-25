@@ -15,15 +15,13 @@ namespace _3_Patitos_S.A.Controllers
         {
             return View();
         }
-
-        // GET: Acceso
+// a
         public ActionResult Enter(string Usuario, string Contrasena)
         {
 
-            try
-            {
+            try{
                 using (Db_Context db = new Db_Context())
-                
+
                 {
 
                     var lst = from d in db.Persona
@@ -38,7 +36,7 @@ namespace _3_Patitos_S.A.Controllers
                     }
                     else
                     {
-                        return Content("Usuario invalido");
+                        return Content("Usuario invalido 1");
                     }
 
 
