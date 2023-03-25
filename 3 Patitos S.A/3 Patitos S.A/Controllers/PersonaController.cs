@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.Net;
+using System.Security.Cryptography;
 
 namespace _3_Patitos_S.A.Controllers
 {
@@ -82,6 +83,12 @@ namespace _3_Patitos_S.A.Controllers
             persona.Rol = 1;
             persona.Id_Estado_Usuario = 1;
             persona.Id_Categoria = 1;
+
+            byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(persona.Contrasena);
+            SHA256 sha256 = SHA256.Create();
+            byte[] hashBytes = sha256.ComputeHash(passwordBytes);
+
+            persona.Contrasena = hashBytes.ToString();
 
             if (ModelState.IsValid)
             {
