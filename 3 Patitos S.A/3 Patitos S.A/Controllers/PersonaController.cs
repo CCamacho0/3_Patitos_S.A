@@ -77,8 +77,12 @@ namespace _3_Patitos_S.A.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddPersona(Persona persona)
+        public IActionResult Registarse(Persona persona)
         {
+            persona.Rol = 1;
+            persona.Id_Estado_Usuario = 1;
+            persona.Id_Categoria = 1;
+
             if (ModelState.IsValid)
             {
                 _context.Persona.Add(persona);

@@ -62,8 +62,6 @@ var EditPersona = function (id_psona) {
         success: function (persona) {
             console.log(persona);
             $("#EditModal").modal('show');
-            document.getElementById("id_persona").value = persona.Id_Persona;
-
             $("#id_persona").val(persona.Id_Persona);
             $("#id_r").val(persona.Rol);
             $("#nombre").val(persona.Nombre_Persona);

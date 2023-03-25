@@ -6,7 +6,7 @@ namespace _3_Patitos_S.A.Models
     {
         [Key]
         [Required(ErrorMessage ="El numero de identificacion es un campo obligatorio")]
-        public int Id_Persona{ get; set; }
+        public int Id_Persona{ get; set;}
 
         public int Rol { get; set; }
 
