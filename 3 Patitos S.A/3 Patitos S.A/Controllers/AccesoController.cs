@@ -23,7 +23,7 @@ namespace _3_Patitos_S.A.Controllers
             try
             {
                 using (Db_Context db = new Db_Context())
-
+                
                 {
 
                     var lst = from d in db.Persona
