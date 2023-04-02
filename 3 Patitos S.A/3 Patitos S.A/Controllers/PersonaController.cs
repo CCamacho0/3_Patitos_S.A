@@ -17,87 +17,79 @@ namespace _3_Patitos_S.A.Controllers
         {
             _context = context;
         }
-        public IActionResult IndexPersonas()
+
+        private object GetListaPersonas()
         {
             var listPersona = from p in _context.Persona
-                              join r in _context.Rol on p.Rol equals r.Id_Rol
+                              join r in _context.Rol on p.Id_Rol equals r.Id_Rol
                               join eu in _context.Estado_Usuario on p.Id_Categoria equals eu.Id_estado_usuario
                               join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
-                              select new {
-                                   p.Id_Persona,
-                                   r.Nombre_Rol,
-                                   p.Nombre_Persona,
-                                   p.Direccion,
-                                   p.Telefono,
-                                   p.Correo,
-                                   eu.Nombre_estado,
-                                   c.Nombre_categoria};
+                             // where eu.Id_estado_usuario != 2 //Filtro para las personas eliminadas
+                              select new
+                              {
+                                  p.Id_Persona,
+                                  r.Nombre_Rol,
+                                  p.Nombre_Persona,
+                                  p.Direccion,
+                                  p.Telefono,
+                                  p.Correo,
+                                  eu.Nombre_estado,
+                                  c.Nombre_categoria
+                              };
 
-            ViewBag.ListPersona = listPersona.ToList();
+            return listPersona;
+        }
+
+        public IActionResult IndexPersonas()
+        {
+            ViewBag.ListPersona = GetListaPersonas();
             ViewBag.ListRol = new SelectList(_context.Rol, "Id_Rol", "Nombre_Rol");
             ViewBag.EstadoUsuario = new SelectList(_context.Estado_Usuario, "Id_estado_usuario", "Nombre_estado");
             ViewBag.Categoria = new SelectList(_context.Categoria, "Id_categoria", "Nombre_categoria");
             return View();
         }
 
-        public JsonResult DeletePersona(int id)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Delete(Persona persona)
         {
-            bool result = false;
-            var persona = _context.Persona.Find(id);
+            var psona = _context.Persona.Find(persona.Id_Persona);
 
-            if (persona != null)
+            if (psona != null)
             {
-                result = true;
-                _context.Persona.Remove(persona);
+                psona.Id_Estado_Usuario = 2;
+                _context.Entry(psona).State = EntityState.Modified;
                 _context.SaveChanges();
+                ViewBag.ListPersona = GetListaPersonas();
             }
-            return Json(result);
+            return RedirectToAction("IndexPersonas");
         }
 
-        public IActionResult GetPersona(int id)
+        public JsonResult Update(int id)
         {
             var persona = _context.Persona.Find(id);
             if (persona == null)
-                return RedirectToAction("IndexPersonas");
-            
+            {
+                Response.StatusCode = 500;
+                return Json(new { message = "No se encontró la persona solicitada" });
+            }
+
             return Json(persona);
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Update(Persona persona)
         {
             if (ModelState.IsValid)
             {
                 _context.Entry(persona).State = EntityState.Modified;
                 _context.SaveChanges();
+                ViewBag.ListPersona = GetListaPersonas();
                 return RedirectToAction("IndexPersonas");
             }
-
             return View(persona);
             
-        }
-
-        [HttpPost]
-        public IActionResult Registarse(Persona persona)
-        {
-            persona.Rol = 1;
-            persona.Id_Estado_Usuario = 1;
-            persona.Id_Categoria = 1;
-
-            byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(persona.Contrasena);
-            SHA256 sha256 = SHA256.Create();
-            byte[] hashBytes = sha256.ComputeHash(passwordBytes);
-
-            persona.Contrasena = hashBytes.ToString();
-
-            if (ModelState.IsValid)
-            {
-                _context.Persona.Add(persona);
-                _context.SaveChanges();
-                return RedirectToAction("IndexPersonas");
-            }
-            return View(persona);
-
         }
 
         public IActionResult Registarse()
@@ -107,5 +99,27 @@ namespace _3_Patitos_S.A.Controllers
             ViewBag.Categoria = new SelectList(_context.Categoria, "Id_categoria", "Nombre_categoria");
             return View();
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Registarse(Persona persona)
+        {
+            persona.Id_Rol = 1;
+            persona.Id_Estado_Usuario = 1;
+            persona.Id_Categoria = 1;
+
+            if (ModelState.IsValid)
+            {
+                byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(persona.Contrasena);
+                SHA256 sha256 = SHA256.Create();
+                byte[] password = sha256.ComputeHash(passwordBytes);
+                persona.Contrasena = Convert.ToBase64String(password);
+
+                _context.Persona.Add(persona);
+                _context.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return View(persona);
+        } 
     }
 }

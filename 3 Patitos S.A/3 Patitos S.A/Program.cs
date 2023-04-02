@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Db_Context>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
 
+builder.Services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(60); });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -18,6 +20,9 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseSession();
+
 app.UseStaticFiles();
 
 app.UseRouting();
@@ -26,6 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Acceso}/{action=Login}/{id?}");
 
 app.Run();

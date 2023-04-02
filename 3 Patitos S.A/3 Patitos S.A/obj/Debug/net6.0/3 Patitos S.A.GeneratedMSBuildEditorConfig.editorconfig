@@ -16,6 +16,18 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/CCD/1-U/1- Noveno Cuatrimestre/3- Arquitectura de softaware aplicada/Proyecto/3_Patitos_S.A/3 Patitos S.A/3 Patitos S.A/Views/Acceso/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXExvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CCD/1-U/1- Noveno Cuatrimestre/3- Arquitectura de softaware aplicada/Proyecto/3_Patitos_S.A/3 Patitos S.A/3 Patitos S.A/Views/Categoria/CategoriaIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENhdGVnb3JpYUluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CCD/1-U/1- Noveno Cuatrimestre/3- Arquitectura de softaware aplicada/Proyecto/3_Patitos_S.A/3 Patitos S.A/3 Patitos S.A/Views/EstadoUsuario/EstadoUsuarioIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXN0YWRvVXN1YXJpb1xFc3RhZG9Vc3VhcmlvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/CCD/1-U/1- Noveno Cuatrimestre/3- Arquitectura de softaware aplicada/Proyecto/3_Patitos_S.A/3 Patitos S.A/3 Patitos S.A/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/CCD/1-U/1- Noveno Cuatrimestre/3- Arquitectura de softaware aplicada/Proyecto/3_Patitos_S.A/3 Patitos S.A/3 Patitos S.A/Views/Persona/Registarse.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVyc29uYVxSZWdpc3RhcnNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/CCD/1-U/1- Noveno Cuatrimestre/3- Arquitectura de softaware aplicada/Proyecto/3_Patitos_S.A/3 Patitos S.A/3 Patitos S.A/Views/Rol/RolIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sXFJvbEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/CCD/1-U/1- Noveno Cuatrimestre/3- Arquitectura de softaware aplicada/Proyecto/3_Patitos_S.A/3 Patitos S.A/3 Patitos S.A/Views/Shared/Error.cshtml]

@@ -1,0 +1,142 @@
+﻿@model _3_Patitos_S.A.Models.Categoria
+@{
+    ViewData["Title"] = "Categoria";
+}
+<!-- Show Categoria-->
+<div class=" row mb-5">
+    <div class="offset-12">
+        <div class="card border">
+            <div class=" d-flex card-header bg-black justify-content-between ">
+                <h4 class="text-white"><strong>Mantenimiento de Categorias</strong></h4>
+                <button type="button" onclick="AddCategoria()" class="btn btn-primary m-1 btn-sm" data-bs-toggle="modal" data-bs-target="#AddModal"><i class="bi bi-plus-lg"></i> Agregar Categoria</button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="tblCategoria" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id Categoria</th>
+                                <th>Nombre </th>
+                                <th>Descuento</th>
+                                <th>Opciones </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var c in ViewBag.ListCategoria)
+                            {
+                                <tr>
+                                    <td>@c.Id_categoria </td>
+                                    <td>@c.Nombre_categoria</td>
+                                    <td>@c.Descuento</td>
+                                    <td class=" d-flex justify-content-end">
+                                        <button type="button" onclick="EditCategoria(@c.Id_categoria)" class="btn btn-warning m-1 btn-sm" data-bs-toggle="modal"><i class="bi bi-pencil-square"></i> Editar</button>
+                                        <button type="button" onclick="DeleteCat(@c.Id_categoria)" class="btn btn-danger m-1 btn-sm" data-bs-toggle="modal" data-bs-target="#DeleteModal"><i class="bi bi-trash3"></i> Eliminar</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Categoria-->
+<div class="modal fade" id="AddModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Agregar categoria</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Create" method="post">
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Nombre Categoria</label>
+                        <input asp-for="Nombre_categoria" class="form-control" type="text"/>
+                        <span asp-validation-for="Nombre_categoria" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Descuento</label>
+                        <input class="form-control" asp-for="Descuento"/>
+                        <span asp-validation-for="Descuento" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary">Agregar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- Edit Categoria-->
+<div class="modal fade" id="EditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Agregar categoria</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Update" method="post">
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Id</label>
+                        <input class="form-control" asp-for="Id_categoria" type="number" id="_Id" readonly />
+                        <span asp-validation-for="Id_categoria" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Nombre Categoria</label>
+                        <input asp-for="Nombre_categoria" class="form-control" type="text" id="_Nombre" />
+                        <span asp-validation-for="Nombre_categoria" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Descuento</label>
+                        <input asp-for="Descuento" class="form-control" type="text" id="_des"/>
+                        <span asp-validation-for="Descuento" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-warning">Guardar cambios</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- Delete Categoria-->
+<div class="modal fade" id="DeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Eliminar Categoria</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Delete" method="post">
+                <div class="modal-body">
+                    <input id="_idc" class="form-control" asp-for="Id_categoria" readonly />
+                    ¿Está seguro de eliminar la categoria?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

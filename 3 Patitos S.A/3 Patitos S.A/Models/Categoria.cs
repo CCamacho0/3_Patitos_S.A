@@ -11,6 +11,7 @@ namespace _3_Patitos_S.A.Models
         public string? Nombre_categoria { get; set;}
 
         [Required(ErrorMessage = "El descuento es un campo obligatorio")]
-        public int Descuento { get; set;}
+        [RegularExpression("^[0-9]*$", ErrorMessage = "El campo debe contener sólo números")]
+        public decimal Descuento { get; set;}
     }
 }

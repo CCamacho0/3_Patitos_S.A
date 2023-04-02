@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RYfy4znI3oDlY6yc0ARD51RfnTDNDR8dVsNFhmZco2M=",
+  "Hash": "lgmBbc/SKg1MNpvW+NuKVDl1N70Wuc1yPq60XyWgbas=",
   "Source": "3 Patitos S.A",
   "BasePath": "_content/3 Patitos S.A",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Categoria.js",
+      "SourceId": "3 Patitos S.A",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\",
+      "BasePath": "_content/3 Patitos S.A",
+      "RelativePath": "js/Categoria.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Categoria.js"
     },
     {
       "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Personas.js",

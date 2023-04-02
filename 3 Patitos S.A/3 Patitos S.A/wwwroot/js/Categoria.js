@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    $('#tblPersonas').DataTable({
+    $('#tblCategoria').DataTable({
         language: {
             "decimal": "",
             "emptyTable": "No hay Información",
@@ -23,27 +23,22 @@
     });
 });
 
-var DelConfirm = function (id) {
-    $("#_idp").val(id);
+var DeleteCat = function (id) {
+    alert(id)
+    $("#_idc").val(id);
 }
 
-var EditPersona = function (_id) {
+var EditCategoria = function (_id) {
     $.ajax({
         url: "Update",
         type: "GET",
         data: { id: _id },
         dataType: "json",
-        success: function (persona) {
+        success: function (cat) {
             $("#EditModal").modal('show');
-            $("#id_persona").val(persona.id_Persona);
-            $("#id_r").val(persona.id_Rol);
-            $("#nombre").val(persona.nombre_Persona);
-            $("#dir").val(persona.direccion);
-            $("#telefono").val(persona.telefono);
-            $("#email").val(persona.correo);
-            $("#contrasena").val(persona.contrasena);
-            $("#id_e").val(persona.id_Estado_Usuario);
-            $("#id_c").val(persona.id_Categoria);
+            $("#_Id").val(cat.id_categoria);
+            $("#_Nombre").val(cat.nombre_categoria);
+            $("#_des").val(cat.descuento);
         },
         error: function (msj) {
             alert(msj);

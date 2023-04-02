@@ -8,7 +8,7 @@ namespace _3_Patitos_S.A.Models
         [Required(ErrorMessage ="El numero de identificacion es un campo obligatorio")]
         public int Id_Persona{ get; set;}
 
-        public int Rol { get; set; }
+        public int Id_Rol { get; set; }
 
         [Required(ErrorMessage = "El nombre de la persona es un campo obligatorio")]
         public string? Nombre_Persona { get; set; }

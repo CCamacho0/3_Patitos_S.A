@@ -87,3 +87,13 @@ CREATE TABLE Ventas(
 	FOREIGN KEY (ID_Persona) REFERENCES Persona(ID_Persona),
 	FOREIGN KEY (Id_Entrega) REFERENCES Tipo_Entrega(Id_Entrega),
 	FOREIGN KEY (ID_Estado_Pedido) REFERENCES Estado_pedido(ID_Estado_Pedido));
+
+INSERT INTO Categoria(Nombre_categoria, Descuento)
+VALUES ('Cliente Regular', 0);
+
+INSERT INTO Estado_usuario(Nombre_estado)
+VALUES ('Activo'),
+	   ('Eliminado');
+
+INSERT INTO Rol(Nombre_Rol)
+VALUES ('Cliente');
