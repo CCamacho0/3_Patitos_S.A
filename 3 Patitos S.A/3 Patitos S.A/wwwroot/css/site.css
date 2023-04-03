@@ -16,3 +16,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.orange {
+    background-color: #FF7400;
+}
+
+.hr-gold {
+    background-color: gold;
+}

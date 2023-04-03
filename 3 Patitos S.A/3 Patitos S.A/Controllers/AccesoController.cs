@@ -13,7 +13,7 @@ namespace _3_Patitos_S.A.Controllers
 {
     public class AccesoController : Controller
     {
-        private Db_Context _context;
+        private readonly Db_Context _context;
 
         public AccesoController(Db_Context context)
         {
@@ -28,7 +28,7 @@ namespace _3_Patitos_S.A.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(string correo, string contrasena)
         {
-            JsonSerializerOptions options = new JsonSerializerOptions { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
+            JsonSerializerOptions options = new() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase };
 
             if (contrasena != null && correo != null)
             {

@@ -8,8 +8,7 @@ namespace _3_Patitos_S.A.Filtros
     {
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            var options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
-            string userJson = filterContext.HttpContext.Session.GetString("User");
+            string? userJson = filterContext.HttpContext.Session.GetString("User");
 
             if (string.IsNullOrEmpty(userJson))
                 filterContext.Result = new RedirectToActionResult("Login", "Acceso", null);

@@ -1,47 +1,50 @@
 ﻿@model _3_Patitos_S.A.Models.Persona
 
 @{
-    ViewData["Title"] = "Registarse";
+    ViewData["Title"] = "Editar";
 }
-
-<h1>Registarse</h1>
-
-<h4>Ingrese los datos solicitados</h4>
+<h1>Editar Persona</h1>
 <hr class="hr-gold" style="height: 3px" />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Registarse">
+        <form asp-action="UpdateClient" asp-controller="Persona" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
             <div class="form-group">
                 <label class="col-form-label">Id de la Persona</label>
-                <input asp-for="Id_Persona" class="form-control" type="text" />
-                <span asp-validation-for="Id_Persona" class="text-danger"></span>
+                <input class="form-control" asp-for="Id_Persona" type="number" readonly />
             </div>
+
             <div class="form-group">
                 <label class="col-form-label">Nombre Completo</label>
-                <input asp-for="Nombre_Persona" class="form-control" />
+                <input asp-for="Nombre_Persona" class="form-control" type="text" />
                 <span asp-validation-for="Nombre_Persona" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label class="col-form-label">Direccion</label>
-                <textarea asp-for="Direccion" class="form-control"></textarea>
+                <label class="col-form-label">Dirección</label>
+                <textarea class="form-control" asp-for="Direccion">></textarea>
                 <span asp-validation-for="Direccion" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label class="col-form-label">Numero de Telefono</label>
-                <input asp-for="Telefono" class="form-control" type="text" />
+                <input class="form-control" asp-for="Telefono" type="number" />
                 <span asp-validation-for="Telefono" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label class="col-form-label">Correo electronico</label>
-                <input asp-for="Correo" class="form-control" type="email" />
+                <label class="col-form-label">Correo</label>
+                <input class="form-control" asp-for="Correo" type="email" />
                 <span asp-validation-for="Correo" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label class="col-form-label">Contraseña</label>
-                <input asp-for="Contrasena" class="form-control" type="password" />
+                <input class="form-control" asp-for="Contrasena" type="password" />
                 <span asp-validation-for="Contrasena" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label class="col-form-label">Confirmar contraseña</label>
                 <input class="form-control" type="password" name="password" required />
@@ -50,17 +53,15 @@
                     <span class="text-danger">@ViewData["Error"]</span>
                 }
             </div>
+
+            <input id="id_r" class="form-control" asp-for="Id_Rol" type="hidden" />
+            <input id="id_e" class="form-control" asp-for="Id_Estado_Usuario" type="hidden" />
+            <input id="id_c" class="form-control" asp-for="Id_Categoria" type="hidden" />
+
             <div class="form-group d-block m-3">
-                <a asp-action="Login" asp-controller="Acceso" class="btn btn-secondary">Cancelar</a>
-                <input type="submit" value="Registrarse" class="btn orange text-white" />
+                <a asp-action="Detalles" asp-controller="Persona" type="button" class="btn btn-secondary">Cancelar</a>
+                <button type="submit" class="btn btn-warning">Guardar cambios</button>
             </div>
         </form>
     </div>
 </div>
-
-
-@section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}

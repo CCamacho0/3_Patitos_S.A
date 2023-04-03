@@ -26,5 +26,6 @@ namespace _3_Patitos_S.A.Models
         public string? Contrasena { get; set; }
         public int Id_Estado_Usuario { get; set; }
         public int Id_Categoria { get; set; }
+
     }
 }

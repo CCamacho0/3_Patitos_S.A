@@ -24,7 +24,10 @@
             <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                 <div class="card border-0 shadow rounded-3 my-5">
                     <div class="card-body p-4 p-sm-5">
-                        <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+                        <div class="d-flex justify-content-center">
+                            <img class="mx-auto" src="~/images/logo-bg-blanco.png" />
+                        </div>
+                        <h5 class="card-title text-center mb-5 fw-light fs-5">Iniciar sesión</h5>
                         <form method="post" asp-controller="Acceso" asp-action="Login">
                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                             <div class="form-control mb-3 border-0">
@@ -40,7 +43,7 @@
                                 <span class="text-danger">@ViewData["Error"]</span>
                             }
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-login text-uppercase" type="submit">Iniciar sesión</button>
+                                <button class="btn orange text-uppercase text-white" type="submit">Iniciar sesión</button>
                                 <a class="form-text text-center" asp-action="Registarse" asp-controller="Persona">Registrarse</a>
                             </div>
                         </form>

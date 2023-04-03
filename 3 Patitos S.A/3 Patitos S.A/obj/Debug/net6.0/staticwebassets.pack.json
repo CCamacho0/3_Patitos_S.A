@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\3 Patitos S.A.bundle.scp.css"
     },
     {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\Images\\Logo-Bg-Blanco.png",
+      "PackagePath": "staticwebassets\\Images\\Logo-Bg-Blanco.png"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\Images\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo.png"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\css\\Maps.css",
+      "PackagePath": "staticwebassets\\css\\Maps.css"
+    },
+    {
       "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,6 +27,10 @@
     {
       "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Categoria.js",
       "PackagePath": "staticwebassets\\js\\Categoria.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Maps.js",
+      "PackagePath": "staticwebassets\\js\\Maps.js"
     },
     {
       "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Personas.js",

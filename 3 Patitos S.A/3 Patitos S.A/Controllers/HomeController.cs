@@ -18,7 +18,7 @@ namespace _3_Patitos_S.A.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Info()
         {
             return View();
         }

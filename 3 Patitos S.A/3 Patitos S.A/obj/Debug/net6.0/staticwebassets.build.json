@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lgmBbc/SKg1MNpvW+NuKVDl1N70Wuc1yPq60XyWgbas=",
+  "Hash": "9h0BOOhe4rpwUvY64bfCKvqViraGDTocMJUvTX72bXM=",
   "Source": "3 Patitos S.A",
   "BasePath": "_content/3 Patitos S.A",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\3 Patitos S.A.bundle.scp.css"
     },
     {
+      "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\css\\Maps.css",
+      "SourceId": "3 Patitos S.A",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\",
+      "BasePath": "_content/3 Patitos S.A",
+      "RelativePath": "css/Maps.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Maps.css"
+    },
+    {
       "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\css\\site.css",
       "SourceId": "3 Patitos S.A",
       "SourceType": "Discovered",
@@ -85,6 +102,40 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\Images\\Logo.png",
+      "SourceId": "3 Patitos S.A",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\",
+      "BasePath": "_content/3 Patitos S.A",
+      "RelativePath": "Images/Logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Logo.png"
+    },
+    {
+      "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\Images\\Logo-Bg-Blanco.png",
+      "SourceId": "3 Patitos S.A",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\",
+      "BasePath": "_content/3 Patitos S.A",
+      "RelativePath": "Images/Logo-Bg-Blanco.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Logo-Bg-Blanco.png"
+    },
+    {
       "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Categoria.js",
       "SourceId": "3 Patitos S.A",
       "SourceType": "Discovered",
@@ -100,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\Categoria.js"
+    },
+    {
+      "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Maps.js",
+      "SourceId": "3 Patitos S.A",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\",
+      "BasePath": "_content/3 Patitos S.A",
+      "RelativePath": "js/Maps.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Maps.js"
     },
     {
       "Identity": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Personas.js",

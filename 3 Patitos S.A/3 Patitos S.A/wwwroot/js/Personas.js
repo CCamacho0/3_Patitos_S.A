@@ -27,6 +27,10 @@ var DelConfirm = function (id) {
     $("#_idp").val(id);
 }
 
+var EditUsuario = function (_id) {
+    $("#EditModalUser").modal('show');
+}
+
 var EditPersona = function (_id) {
     $.ajax({
         url: "Update",
