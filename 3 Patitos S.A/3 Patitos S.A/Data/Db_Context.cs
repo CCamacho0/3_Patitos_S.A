@@ -15,5 +15,6 @@ namespace _3_Patitos_S.A.Data
         public DbSet<Categoria> Categoria { get; set;}
         public DbSet<Rol> Rol { get; set;}
         public DbSet<Estado_Usuario> Estado_Usuario { get;set; }
+        public DbSet<Productos> Productos { get; set; }
     }
 }
