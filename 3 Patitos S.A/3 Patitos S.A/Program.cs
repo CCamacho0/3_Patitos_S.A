@@ -1,9 +1,8 @@
 using _3_Patitos_S.A.Data;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Host.ConfigureWebHostDefaults(webBuilder => { webBuilder.UseContentRoot(AppContext.BaseDirectory); });
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
