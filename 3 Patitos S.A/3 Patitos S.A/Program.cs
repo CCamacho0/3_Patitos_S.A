@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Host.ConfigureWebHostDefaults(webBuilder => { webBuilder.UseContentRoot(AppContext.BaseDirectory); });
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<Db_Context>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("conexion")));
