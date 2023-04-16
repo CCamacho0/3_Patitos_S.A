@@ -44,7 +44,7 @@ namespace _3_Patitos_S.A.Controllers
                     var userBytes = JsonSerializer.SerializeToUtf8Bytes(user, options);
                     HttpContext.Session.Set("User", userBytes);
 
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("IndexU", "Productos");
                 }
                 else
                 {

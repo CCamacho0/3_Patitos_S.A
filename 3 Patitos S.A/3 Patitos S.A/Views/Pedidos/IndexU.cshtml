@@ -1,0 +1,136 @@
+﻿@model _3_Patitos_S.A.Models.Pedidos
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card-header bg-black justify-content-between d-flex">
+    <h3 class="text-black text-white ">Lista de pedidos</h3>
+</div>
+
+<!-- Show Pedidos-->
+<div class=" row mb-5">
+    @if (ViewData["Nodata"] == null)
+    {
+        @foreach (var p in ViewBag.ListPedidos)
+        {
+            <div class="card-body border-0">
+                <div class="card">
+                    <h5 class="card-header">@p.Nombre_producto</h5>
+                    <div class="card-body">
+                        <div class="form-group d-flex">
+                            <div class="form-group d-flex ">
+                                <label class="col-form-label mx-1 card-text">Cantidad:</label>
+                                <label class="col-form-label mx-2 card-text">@p.Cantidad</label>
+                            </div>
+                            <label class="col-form-label mx-2 card-text">|</label>
+                            <div class="form-group d-flex">
+                                <label class="col-form-label mx-1 d-block card-text">Precio Total:</label>
+                                <label class="col-form-label card-text">@p.Precio</label>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex">
+                            <div class="form-group d-flex ">
+                                <label class="col-form-label mx-1 card-text">Tipo de entrega:</label>
+                                <label class="col-form-label mx-2 card-text">@p.Nombre_Entrega</label>
+                            </div>
+                            <label class="col-form-label mx-2 card-text">|</label>
+                            <div class="form-group d-flex">
+                                <label class="col-form-label mx-1 d-block card-text">Estado:</label>
+                                <label class="col-form-label card-text">@p.Nombre_Estado_Pedido</label>
+                            </div>
+                        </div>
+
+                        <a asp-action="RCompra" asp-controller="Pedidos" asp-route-id="@p.Id_pedido" class="btn orange text-white m-1 btn-sm"><i class="bi bi-credit-card-fill"></i> Realizar compra</a>
+                        <button type="button" onclick="Edit(@p.Id_pedido)" class="btn btn-warning m-1 btn-sm" data-bs-toggle="modal"><i class="bi bi-pencil-square"></i> Editar</button>
+                        <button type="button" onclick="DelConfirm(@p.Id_pedido)" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#DeleteModal"><i class="bi bi-trash3"></i> Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="d-flex align-items-center justify-content-center" style="width: 500vh;">
+            <h5>@ViewData["Nodata"]</h5>
+        </div>
+    }
+</div>
+
+<!-- Edit Pedidos-->
+<div class="modal fade" id="EditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-black text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Editar Estado</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="UpdateU" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <input id="id" class="form-control" asp-for="Id_pedido" hidden />
+                <input id="producto" class="form-control" asp-for="ID_Producto" hidden />
+                <input id="persona" class="form-control" asp-for="ID_Persona" hidden />
+                <input id="ePedido" class="form-control" asp-for="ID_Estado_Pedido" hidden />
+                <input id="precio" class="form-control" hidden />
+
+                <div class="form-group col-5 m-3">
+                    <label class="col-form-label">Tipo de entrega</label>
+                    @Html.DropDownListFor(p => p.ID_Entrega, (SelectList)ViewBag.Entrega, new { @class = "form-select", @Id="entrega"})
+                </div>
+
+                <div class="form-group d-flex">
+                    <div class="form-group col-5 m-3">
+                        <label class="col-form-label ">Cantidad</label>
+                        <input id="cant" class="form-control" asp-for="Cantidad"/>
+                        @if (ViewData["Error"] != null)
+                        {
+                            <span class="text-danger">@ViewData["Error"]</span>
+                        }
+                    </div>
+                    <div class="form-group col-5 m-3">
+                        <label class="col-form-label ">Precio total</label>
+                        <input id="_precio_" class="form-control" asp-for="Precio" readonly />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-warning">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Pedidos-->
+<div class="modal fade" id="DeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-black text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Eliminar Pedido</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Delete" method="post">
+                <div class="modal-body">
+                    <input id="_ide" class="form-control" asp-for="Id_pedido" name="id" hidden />
+                    ¿Está seguro de eliminar el pedido?
+                    @if (ViewData["Error"] != null)
+                    {
+                        <span class="text-danger">@ViewData["Error"]</span>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" value="Delete" class="btn btn-danger">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/pedidos.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

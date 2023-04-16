@@ -23,6 +23,11 @@
                 <span asp-validation-for="Nombre_Persona" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label class="col-form-label">Fecha de nacimiento</label>
+                <input asp-for="Fecha_Nacimiento" class="form-control" type="date" max="2010-01-01" min="1900-01-01" />
+                <span asp-validation-for="Fecha_Nacimiento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label class="col-form-label">Direccion</label>
                 <textarea asp-for="Direccion" class="form-control"></textarea>
                 <span asp-validation-for="Direccion" class="text-danger"></span>
@@ -57,7 +62,6 @@
         </form>
     </div>
 </div>
-
 
 @section Scripts {
     @{

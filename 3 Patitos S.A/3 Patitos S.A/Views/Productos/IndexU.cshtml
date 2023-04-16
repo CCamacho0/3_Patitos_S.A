@@ -1,71 +1,52 @@
-﻿@model IEnumerable<_3_Patitos_S.A.Models.Productos>
+﻿@model _3_Patitos_S.A.Models.Productos
 
 @{
     ViewData["Title"] = "Index";
 }
+<div class="text-center mb-2">
+    <h2>Catalogo de Productos</h2>
+    <hr class=" hr-gold " style="height: 2px" />
+</div>
+<!-- Show producto-->
+<div class="row row-cols-1 row-cols-md-4 g-4">
+    @if (ViewBag.ProductosList != null)
+    {
+        @foreach (var p in ViewBag.ProductosList)
+        {
+            <div class="col">
+                <div class="card">
+                    <h4 class="card-title m-3">@p.Nombre_producto</h4>
+                    <img src="data:image/jpeg;base64,@Convert.ToBase64String(p.Imagen)" class="card-img-top MaxSize-img" alt="...">
 
-<h1>Index</h1>
+                    <div class="card-body">
+                        <hr class="hr-gold" style="height: 2px" />
 
-<p>
-   
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre_producto)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fecha_ingreso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fecha_egreso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cantidad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ID_Estado)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Precio)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Id_Ubicacion)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre_producto)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fecha_ingreso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fecha_egreso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cantidad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ID_Estado)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Precio)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id_Ubicacion)
-            </td>
-            <td>
-                
-                <a asp-action="Details" asp-route-id="@item.ID_Producto">Ver Producto</a> |
-                
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+                        <div class="form-group d-flex">
+                            <div class="form-group d-flex ">
+                                <label class="col-form-label mx-1">Cantidad:</label>
+                                <label class="col-form-label mx-2">@p.Cantidad</label>
+                            </div>
+
+                            <div class="form-group d-flex">
+                                <label class="col-form-label mx-1 d-block">Precio:</label>
+                                <label class="col-form-label">@p.Precio</label>
+                            </div>
+                        </div >
+                        <div class="form-group">
+                            <label class="col-form-label mx-1 d-block">Detalle:</label>
+                            <label class="col-form-label">@p.Detalles</label>
+                        </div>
+                        <a class="btn orange text-white m-1 btn-sm" asp-area="" asp-controller="Pedidos" asp-action="Create" asp-route-id="@p.ID_Producto">Realizar pedido</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="d-flex align-items-center justify-content-center" style="width: 500vh;">
+            <h5>No hay productos en el inventario</h5>
+        </div>
+    }
+
+</div>

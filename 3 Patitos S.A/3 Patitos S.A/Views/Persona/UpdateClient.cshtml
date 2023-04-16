@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Editar";
 }
-<h1>Editar Persona</h1>
+<h1>Editar datos de usuario</h1>
 <hr class="hr-gold" style="height: 3px" />
 <div class="row">
     <div class="col-md-4">
@@ -19,6 +19,12 @@
                 <label class="col-form-label">Nombre Completo</label>
                 <input asp-for="Nombre_Persona" class="form-control" type="text" />
                 <span asp-validation-for="Nombre_Persona" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="col-form-label">Fecha de nacimiento</label>
+                <input asp-for="Fecha_Nacimiento" class="form-control" type="date" max="2010-01-01" min="1900-01-01" />
+                <span asp-validation-for="Fecha_Nacimiento" class="text-danger"></span>
             </div>
 
             <div class="form-group">

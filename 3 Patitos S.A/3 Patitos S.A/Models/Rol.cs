@@ -8,6 +8,7 @@ namespace _3_Patitos_S.A.Models
         public int Id_Rol { get; set; }
 
         [Required(ErrorMessage ="El nombre del rol es un campo obligatorio")]
+        [RegularExpression("^[a-zA-ZáéíóúüÁÉÍÓÚÜ\\s]+$", ErrorMessage = "No se aceptan valores numericos en este campo")]
         public string? Nombre_Rol { get; set; }
     }
 }

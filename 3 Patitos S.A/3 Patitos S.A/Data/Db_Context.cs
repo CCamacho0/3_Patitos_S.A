@@ -18,5 +18,8 @@ namespace _3_Patitos_S.A.Data
         public DbSet<Estado_Productos> Estado_Productos { get; set; }
         public DbSet<Tipo_Entrega> Tipo_Entrega { get; set; }
         public DbSet<Productos> Productos { get; set; }
+        public DbSet<Ubicacion> Ubicacion { get; set; }
+        public DbSet<Pedidos> Pedidos { get; set; }
+        public DbSet<Estado_pedido> Estado_pedido { get; set; }
     }
 }

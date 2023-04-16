@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using _3_Patitos_S.A.Data;
 using _3_Patitos_S.A.Models;
+using _3_Patitos_S.A.Filtros;
 
 namespace _3_Patitos_S.A
 {
+    [FiltroAutenticacion]
     public class Estado_UsuarioController : Controller
     {
         private readonly Db_Context _context;
@@ -19,44 +21,15 @@ namespace _3_Patitos_S.A
             _context = context;
         }
 
-        // GET: Estado_Usuario
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-              return _context.Estado_Usuario != null ? 
-                          View(await _context.Estado_Usuario.ToListAsync()) :
-                          Problem("Entity set 'Db_Context.Estado_Usuario'  is null.");
-        }
-
-        // GET: Estado_Usuario/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null || _context.Estado_Usuario == null)
-            {
-                return NotFound();
-            }
-
-            var estado_Usuario = await _context.Estado_Usuario
-                .FirstOrDefaultAsync(m => m.Id_estado_usuario == id);
-            if (estado_Usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(estado_Usuario);
-        }
-
-        // GET: Estado_Usuario/Create
-        public IActionResult Create()
-        {
+            ViewBag.ListEstados = _context.Estado_Usuario.ToList();
             return View();
         }
 
-        // POST: Estado_Usuario/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id_estado_usuario,Nombre_estado")] Estado_Usuario estado_Usuario)
+        public async Task<IActionResult> Create(Estado_Usuario estado_Usuario)
         {
             if (ModelState.IsValid)
             {
@@ -67,97 +40,48 @@ namespace _3_Patitos_S.A
             return View(estado_Usuario);
         }
 
-        // GET: Estado_Usuario/Edit/5
-        public async Task<IActionResult> Edit(int? id)
-        {
-            if (id == null || _context.Estado_Usuario == null)
-            {
-                return NotFound();
-            }
 
-            var estado_Usuario = await _context.Estado_Usuario.FindAsync(id);
-            if (estado_Usuario == null)
+        public JsonResult Update(int id)
+        {
+            var eUsuario = _context.Estado_Usuario.Find(id);
+            if (eUsuario == null)
             {
-                return NotFound();
+                Response.StatusCode = 500;
+                return Json("No se encontró la Estado usuario solicitada");
             }
-            return View(estado_Usuario);
+            return Json(eUsuario);
         }
 
-        // POST: Estado_Usuario/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id_estado_usuario,Nombre_estado")] Estado_Usuario estado_Usuario)
+        public IActionResult Update(Estado_Usuario estado_Usuario)
         {
-            if (id != estado_Usuario.Id_estado_usuario)
-            {
-                return NotFound();
-            }
-
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(estado_Usuario);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!Estado_UsuarioExists(estado_Usuario.Id_estado_usuario))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Entry(estado_Usuario).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
             return View(estado_Usuario);
         }
 
-        // GET: Estado_Usuario/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null || _context.Estado_Usuario == null)
-            {
-                return NotFound();
-            }
-
-            var estado_Usuario = await _context.Estado_Usuario
-                .FirstOrDefaultAsync(m => m.Id_estado_usuario == id);
-            if (estado_Usuario == null)
-            {
-                return NotFound();
-            }
-
-            return View(estado_Usuario);
-        }
-
-        // POST: Estado_Usuario/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Estado_Usuario == null)
+            var estado_Usuarios = await _context.Estado_Usuario.FindAsync(id);
+            if (estado_Usuarios != null)
             {
-                return Problem("Entity set 'Db_Context.Estado_Usuario'  is null.");
+                if (_context.Persona.Where(p => p.Id_Estado_Usuario == id).Count() == 0)
+                    _context.Estado_Usuario.Remove(estado_Usuarios);
+                else
+                {
+                    ViewData["Error"] = "No se puede eliminar porque hay productos con este estado.";
+                    return View();
+                }
             }
-            var estado_Usuario = await _context.Estado_Usuario.FindAsync(id);
-            if (estado_Usuario != null)
-            {
-                _context.Estado_Usuario.Remove(estado_Usuario);
-            }
-            
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool Estado_UsuarioExists(int id)
-        {
-          return (_context.Estado_Usuario?.Any(e => e.Id_estado_usuario == id)).GetValueOrDefault();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -8,7 +8,7 @@
         <div class="card border">
             <div class=" d-flex card-header bg-black justify-content-between ">
                 <h4 class="text-white"><strong>Mantenimiento de Categorias</strong></h4>
-                <button type="button" onclick="AddCategoria()" class="btn orange m-1 btn-sm" data-bs-toggle="modal" data-bs-target="#AddModal"><i class="bi bi-plus-lg"></i> Agregar Categoria</button>
+                <button type="button" onclick="AddCategoria()" class="btn orange m-1 btn-sm text-white" data-bs-toggle="modal" data-bs-target="#AddModal"><i class="bi bi-plus-lg"></i> Agregar Categoria</button>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -46,9 +46,9 @@
 <div class="modal fade" id="AddModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-black text-white">
                 <h5 class="modal-title" id="staticBackdropLabel">Agregar categoria</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form asp-action="Create" method="post">
                 <div class="modal-body">
@@ -81,9 +81,9 @@
 <div class="modal fade" id="EditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-black text-white">
                 <h5 class="modal-title" id="staticBackdropLabel">Agregar categoria</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form asp-action="Update" method="post">
                 <div class="modal-body">
@@ -122,9 +122,9 @@
 <div class="modal fade" id="DeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-black text-white">
                 <h5 class="modal-title" id="staticBackdropLabel">Eliminar Categoria</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form asp-action="Delete" method="post">
                 <div class="modal-body">
@@ -140,3 +140,10 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/categoria.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,5 +1,4 @@
 using _3_Patitos_S.A.Data;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -32,6 +31,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Acceso}/{action=Login}/{id?}");
+    pattern: "{controller=Productos}/{action=IndexU}/{id?}");
 
 app.Run();
