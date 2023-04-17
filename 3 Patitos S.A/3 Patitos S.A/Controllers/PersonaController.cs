@@ -179,7 +179,7 @@ namespace _3_Patitos_S.A.Controllers
 
                 _context.Persona.Add(persona);
                 _context.SaveChanges();
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Login", "Acceso");
             }
             return View(persona);
         }
