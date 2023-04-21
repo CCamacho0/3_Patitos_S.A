@@ -119,10 +119,14 @@ namespace _3_Patitos_S.A.Controllers
             var producto = _context.Productos.Find(id);
             if (producto != null)
             {
+
+                var va3 = 0.13;
+                var iva = (int)producto.Precio * va3;
+
                 pedidos.ID_Producto = id;
                 ViewBag.Nombre = producto.Nombre_producto.ToString();
                 ViewBag.Img = producto.Imagen;
-                ViewBag.Precio = producto.Precio;
+                ViewBag.Precio = (int)producto.Precio+iva;
             }
 
 
@@ -152,8 +156,9 @@ namespace _3_Patitos_S.A.Controllers
 
             if (producto.Cantidad < 0)
             {
-                ViewData["Error"] = "La cantidad pedida es mayor a la cantidad disponible";
-                return View(pedidos);
+                //ViewData["Error"] = "La cantidad pedida es mayor a la cantidad disponible";
+                //return View(pedidos);
+                return RedirectToAction("Create", "Pedidos");
             }
             
             else

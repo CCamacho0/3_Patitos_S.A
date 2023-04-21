@@ -29,7 +29,7 @@ namespace _3_Patitos_S.A.Controllers
         {
             var listPersona = from p in _context.Persona
                               join r in _context.Rol on p.Id_Rol equals r.Id_Rol
-                              join eu in _context.Estado_Usuario on p.Id_Categoria equals eu.Id_estado_usuario
+                              join eu in _context.Estado_Usuario on p.Id_Estado_Usuario equals eu.Id_estado_usuario
                               join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
                               select new
                               {
