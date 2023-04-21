@@ -31,12 +31,12 @@ namespace _3_Patitos_S.A.Controllers
                               join r in _context.Rol on p.Id_Rol equals r.Id_Rol
                               join eu in _context.Estado_Usuario on p.Id_Categoria equals eu.Id_estado_usuario
                               join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
-                             // where eu.Id_estado_usuario != 2 //Filtro para las personas eliminadas
                               select new
                               {
                                   p.Id_Persona,
                                   r.Nombre_Rol,
                                   p.Nombre_Persona,
+                                  p.Fecha_Nacimiento,
                                   p.Direccion,
                                   p.Telefono,
                                   p.Correo,
@@ -47,7 +47,7 @@ namespace _3_Patitos_S.A.Controllers
             return listPersona;
         }
 
-        private string ConvertContrasena(string contrasena)
+        private static string ConvertContrasena(string contrasena)
         {
             byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(contrasena);
             SHA256 sha256 = SHA256.Create();
@@ -90,7 +90,6 @@ namespace _3_Patitos_S.A.Controllers
                 Response.StatusCode = 500;
                 return Json("No se encontró la persona solicitada");
             }
-
             return Json(persona);
         }
 
@@ -181,7 +180,7 @@ namespace _3_Patitos_S.A.Controllers
 
                     _context.Persona.Add(persona);
                     _context.SaveChanges();
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Login", "Acceso");
                 }
                 return View(persona);
             }
@@ -195,7 +194,6 @@ namespace _3_Patitos_S.A.Controllers
         [FiltroAutenticacion]
         public IActionResult Detalles()
         {
-            object? persona = null;
             string? userJson = HttpContext.Session.GetString("User");
             try
             {
@@ -203,35 +201,28 @@ namespace _3_Patitos_S.A.Controllers
                 {
                     user = JsonSerializer.Deserialize<Persona>(userJson, options);
 
-                    var getpersona = from p in _context.Persona
-                                     join r in _context.Rol on p.Id_Rol equals r.Id_Rol
-                                     join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
-                                     where p.Id_Persona == user.Id_Persona
-                                     select new
-                                     {
-                                         p.Id_Persona,
-                                         r.Nombre_Rol,
-                                         p.Nombre_Persona,
-                                         p.Direccion,
-                                         p.Telefono,
-                                         p.Correo,
-                                         c.Nombre_categoria
-                                     };
-                    ViewBag.Persona = getpersona.ToList();
-
-                    persona = _context.Persona.Find(user.Id_Persona);
-
-                    if (persona == null)
-                        return NotFound();
-                }
-
-                return View(persona);
-            }
-            catch(Exception e)
-            {
-                ViewData["Error"] = e.Message;
+                var getpersona = from p in _context.Persona
+                                 join r in _context.Rol on p.Id_Rol equals r.Id_Rol
+                                 join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
+                                 where p.Id_Persona == user.Id_Persona
+                                 select new
+                                 {
+                                     p.Id_Persona,
+                                     r.Nombre_Rol,
+                                     p.Nombre_Persona,
+                                     p.Fecha_Nacimiento,
+                                     p.Direccion,
+                                     p.Telefono,
+                                     p.Correo,
+                                     c.Nombre_categoria
+                                 };
+                ViewBag.Persona = getpersona.ToList();
                 return View();
             }
+            else
+                return NotFound();
+
+
         }
     }
 }

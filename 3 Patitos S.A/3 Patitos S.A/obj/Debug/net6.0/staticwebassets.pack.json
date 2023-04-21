@@ -29,12 +29,48 @@
       "PackagePath": "staticwebassets\\js\\Categoria.js"
     },
     {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\EstadoPedidos.js",
+      "PackagePath": "staticwebassets\\js\\EstadoPedidos.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\EstadoProductos.js",
+      "PackagePath": "staticwebassets\\js\\EstadoProductos.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\EstadoUsuarios.js",
+      "PackagePath": "staticwebassets\\js\\EstadoUsuarios.js"
+    },
+    {
       "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Maps.js",
       "PackagePath": "staticwebassets\\js\\Maps.js"
     },
     {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Pedidos.js",
+      "PackagePath": "staticwebassets\\js\\Pedidos.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\PedidosCreate.js",
+      "PackagePath": "staticwebassets\\js\\PedidosCreate.js"
+    },
+    {
       "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Personas.js",
       "PackagePath": "staticwebassets\\js\\Personas.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Productos.js",
+      "PackagePath": "staticwebassets\\js\\Productos.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Roles.js",
+      "PackagePath": "staticwebassets\\js\\Roles.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\TipoEntrega.js",
+      "PackagePath": "staticwebassets\\js\\TipoEntrega.js"
+    },
+    {
+      "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\Ubicacion.js",
+      "PackagePath": "staticwebassets\\js\\Ubicacion.js"
     },
     {
       "Id": "D:\\CCD\\1-U\\1- Noveno Cuatrimestre\\3- Arquitectura de softaware aplicada\\Proyecto\\3_Patitos_S.A\\3 Patitos S.A\\3 Patitos S.A\\wwwroot\\js\\site.js",

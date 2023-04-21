@@ -7,7 +7,8 @@ namespace _3_Patitos_S.A.Models
         [Key]
         public int Id_estado_usuario { get; set; }
 
-        [Required(ErrorMessage ="E: nombre del estado es un campo obligatorio")]
+        [Required(ErrorMessage ="El nombre del estado es un campo obligatorio")]
+        [RegularExpression("^[a-zA-ZáéíóúüÁÉÍÓÚÜ\\s]+$", ErrorMessage = "No se aceptan valores numericos en este campo")]
         public string? Nombre_estado {get; set; }
 
     }

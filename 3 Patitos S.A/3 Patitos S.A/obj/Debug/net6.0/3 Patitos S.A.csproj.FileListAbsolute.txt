@@ -1,11 +1,3 @@
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.csproj.AssemblyReference.cache
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.GeneratedMSBuildEditorConfig.editorconfig
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.AssemblyInfoInputs.cache
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.AssemblyInfo.cs
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.csproj.CoreCompileInputs.cache
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.MvcApplicationPartsAssemblyInfo.cache
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.RazorAssemblyInfo.cache
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.RazorAssemblyInfo.cs
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\appsettings.Development.json
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\appsettings.json
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\3 Patitos S.A.staticwebassets.runtime.json
@@ -17,8 +9,29 @@ D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Azure.Core.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Azure.Identity.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Humanizer.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\MessagePack.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\MessagePack.Annotations.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Build.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Build.Framework.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Features.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Features.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Scripting.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Features.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
@@ -42,66 +55,8 @@ D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Mono.TextTemplating.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.CodeDom.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Drawing.Common.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Memory.Data.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Runtime.Caching.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Security.Permissions.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Text.Encodings.Web.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Text.Json.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Windows.Extensions.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.3 Patitos S.A.Microsoft.AspNetCore.StaticWebAssets.props
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.build.3 Patitos S.A.props
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.3 Patitos S.A.props
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.3 Patitos S.A.props
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets.pack.json
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets.build.json
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets.development.json
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\scopedcss\bundle\3 Patitos S.A.styles.css
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\scopedcss\projectbundle\3 Patitos S.A.bundle.scp.css
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.csproj.CopyComplete
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\refint\3 Patitos S.A.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.pdb
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.genruntimeconfig.cache
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\ref\3 Patitos S.A.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\MessagePack.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\MessagePack.Annotations.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Build.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Build.Framework.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Features.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Features.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Razor.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Scripting.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Features.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.VisualBasic.Workspaces.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.DiaSymReader.dll
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.DotNet.Scaffolding.Shared.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.SqlServer.Server.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.VisualStudio.Debugger.Contracts.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -110,6 +65,8 @@ D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Mono.TextTemplating.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\Newtonsoft.Json.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\NuGet.Common.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\NuGet.Configuration.dll
@@ -120,12 +77,23 @@ D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\NuGet.ProjectModel.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\NuGet.Protocol.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\NuGet.Versioning.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.CodeDom.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Composition.AttributedModel.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Composition.Convention.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Composition.Hosting.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Composition.Runtime.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Composition.TypedParts.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Memory.Data.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Text.Json.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\System.Windows.Extensions.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\es\Microsoft.CodeAnalysis.resources.dll
@@ -282,8 +250,40 @@ D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.csproj.AssemblyReference.cache
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.GeneratedMSBuildEditorConfig.editorconfig
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.AssemblyInfoInputs.cache
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.AssemblyInfo.cs
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.csproj.CoreCompileInputs.cache
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.MvcApplicationPartsAssemblyInfo.cache
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.RazorAssemblyInfo.cache
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.RazorAssemblyInfo.cs
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.3 Patitos S.A.Microsoft.AspNetCore.StaticWebAssets.props
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.build.3 Patitos S.A.props
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.3 Patitos S.A.props
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.3 Patitos S.A.props
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets.pack.json
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets.build.json
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\staticwebassets.development.json
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\scopedcss\bundle\3 Patitos S.A.styles.css
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\scopedcss\projectbundle\3 Patitos S.A.bundle.scp.css
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.csproj.CopyComplete
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\refint\3 Patitos S.A.dll
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.pdb
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\3 Patitos S.A.genruntimeconfig.cache
+D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\obj\Debug\net6.0\ref\3 Patitos S.A.dll

@@ -7,6 +7,8 @@ using _3_Patitos_S.A.Models;
 using _3_Patitos_S.A.Data;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using _3_Patitos_S.A.Filtros;
+using Microsoft.Extensions.Options;
 
 namespace _3_Patitos_S.A.Controllers
 {
@@ -19,56 +21,42 @@ namespace _3_Patitos_S.A.Controllers
             _context = context;
         }
 
-        // GET: Productos
-        public async Task<IActionResult> Index()
+        [FiltroAutenticacion]
+        public ActionResult Index()
         {
-            return View(await _context.Productos.ToListAsync());
+            ViewBag.ProductosList = _context.Productos.ToList();
+            ViewBag.Ubicacion = new SelectList(_context.Ubicacion, "Id_Ubicacion", "Nombre_Ubicacion");
+            ViewBag.Estado = new SelectList(_context.Estado_Productos, "ID_Estado", "Nombre_estado");
+
+            return View();
         }
-        public async Task<IActionResult> IndexU()
+        public ActionResult IndexU()
         {
-            return View(await _context.Productos.ToListAsync());
-        }
-
-        // GET: Productos/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var productos = await _context.Productos
-                .FirstOrDefaultAsync(m => m.ID_Producto == id);
-            if (productos == null)
-            {
-                return NotFound();
-            }
-
-            return View(productos);
-        }
-
-        // GET: Productos/Create
-        public IActionResult Create()
-        {
+            ViewBag.ProductosList = _context.Productos.ToList();
             return View();
         }
 
-        // POST: Productos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID_Producto,Nombre_producto,Fecha_ingreso,Fecha_egreso,Cantidad,ID_Estado,Precio,Id_Ubicacion")] Productos productos)
+        [FiltroAutenticacion]
+        public IActionResult Create(Productos productos)
         {
+            if(productos.Img != null)
+            {
+                using Stream fs = productos.Img.OpenReadStream();
+                BinaryReader binaryReader = new(fs);
+                using BinaryReader br = binaryReader;
+                productos.Imagen = br.ReadBytes((int)fs.Length);
+            }
             try
             {
                 if (ModelState.IsValid)
                 {
                     _context.Add(productos);
-                    await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
                 }
-                return View(productos);
+                return RedirectToAction("Index");
             }
             catch(Exception ex)
             {
@@ -77,89 +65,54 @@ namespace _3_Patitos_S.A.Controllers
             }
         }
 
-        // GET: Productos/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        [FiltroAutenticacion]
+        public JsonResult Update(int id)
         {
-            if (id == null)
+            var producto = _context.Productos.Find(id);
+            if (producto == null)
             {
-                return NotFound();
+                Response.StatusCode = 500;
+                return Json("No se encontró la persona solicitada");
             }
-
-            var productos = await _context.Productos.FindAsync(id);
-            if (productos == null)
-            {
-                return NotFound();
-            }
-            return View(productos);
+            return Json(producto);
         }
 
-        // POST: Productos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID_Producto,Nombre_producto,Fecha_ingreso,Fecha_egreso,Cantidad,ID_Estado,Precio,Id_Ubicacion")] Productos productos)
+        [FiltroAutenticacion]
+        public IActionResult Update(Productos productos)
         {
-            if (id != productos.ID_Producto)
+            if (productos.Img != null)
             {
-                return NotFound();
+                using Stream fs = productos.Img.OpenReadStream();
+                BinaryReader binaryReader = new(fs);
+                using BinaryReader br = binaryReader;
+                productos.Imagen = br.ReadBytes((int)fs.Length);
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(productos);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ProductosExists(productos.ID_Producto))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
+                _context.Entry(productos).State = EntityState.Modified;
+                _context.SaveChanges();
+                return RedirectToAction("Index");
             }
             return View(productos);
         }
 
-        // GET: Productos/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var productos = await _context.Productos
-                .FirstOrDefaultAsync(m => m.ID_Producto == id);
-            if (productos == null)
-            {
-                return NotFound();
-            }
-
-            return View(productos);
-        }
-
-        // POST: Productos/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        [FiltroAutenticacion]
+        public IActionResult Delete(Productos? productos)
         {
-            var productos = await _context.Productos.FindAsync(id);
-            _context.Productos.Remove(productos);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
+            var producto = _context.Productos.Find(productos.ID_Producto);
 
-        private bool ProductosExists(int id)
-        {
-            return _context.Productos.Any(e => e.ID_Producto == id);
+            if (producto != null)
+            {
+                producto.ID_Estado = 4;
+                _context.Entry(producto).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+            return RedirectToAction("Index");
         }
     }
 }

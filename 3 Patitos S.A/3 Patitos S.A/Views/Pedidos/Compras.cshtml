@@ -1,0 +1,54 @@
+﻿@model _3_Patitos_S.A.Models.Pedidos
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="card-header bg-black justify-content-between d-flex">
+    <h3 class="text-black text-white ">Histotial de Compras</h3>
+</div>
+
+<!-- Show Pedidos-->
+<div class=" row mb-5">
+    @if (ViewData["Nodata"] == null)
+    {
+        @foreach (var p in ViewBag.ListPedidos)
+        {
+            <div class="card-body border-0">
+                <div class="card">
+                    <h5 class="card-header">@p.Nombre_producto</h5>
+                    <div class="card-body">
+                        <div class="form-group d-flex">
+                            <div class="form-group d-flex ">
+                                <label class="col-form-label mx-1 card-text">Cantidad:</label>
+                                <label class="col-form-label mx-2 card-text">@p.Cantidad</label>
+                            </div>
+                            <label class="col-form-label mx-2 card-text">|</label>
+                            <div class="form-group d-flex">
+                                <label class="col-form-label mx-1 d-block card-text">Precio Total:</label>
+                                <label class="col-form-label card-text">@p.Precio</label>
+                            </div>
+                        </div>
+                        <div class="form-group d-flex">
+                            <div class="form-group d-flex ">
+                                <label class="col-form-label mx-1 card-text">Tipo de entrega:</label>
+                                <label class="col-form-label mx-2 card-text">@p.Nombre_Entrega</label>
+                            </div>
+                            <label class="col-form-label mx-2 card-text">|</label>
+                            <div class="form-group d-flex">
+                                <label class="col-form-label mx-1 d-block card-text">Estado:</label>
+                                <label class="col-form-label card-text">@p.Nombre_Estado_Pedido</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="d-flex align-items-center justify-content-center" style="width: 500vh;">
+            <h5>@ViewData["Nodata"]</h5>
+        </div>
+    }
+</div>

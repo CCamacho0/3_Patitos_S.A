@@ -42,6 +42,7 @@ var EditPersona = function (_id) {
             $("#id_persona").val(persona.id_Persona);
             $("#id_r").val(persona.id_Rol);
             $("#nombre").val(persona.nombre_Persona);
+            $("#_fecha").val(persona.fecha_Nacimiento);
             $("#dir").val(persona.direccion);
             $("#telefono").val(persona.telefono);
             $("#email").val(persona.correo);

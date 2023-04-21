@@ -1,0 +1,52 @@
+﻿@model _3_Patitos_S.A.Models.Pedidos
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Generar Pedido</h1>
+<hr class="hr-gold" style="height: 3px" />
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <input class="form-control" asp-for="ID_Producto" hidden />
+            <input id="_precio" class="form-control" value="@ViewBag.Precio" hidden />
+
+            <div class="form-group col-3 m-3">
+                <label class="col-form-label">Producto:</label>
+                <label class="col-form-label">@ViewBag.Nombre</label>
+            </div>
+
+            <div class="form-group col-3 m-3">
+                <label class="col-form-label">Seleccione el tipo de entrega:</label>
+                @Html.DropDownListFor(p => p.ID_Entrega, (SelectList)ViewBag.Entrega, new { @class = "form-select", @Id="_entrega"})
+            </div>
+
+            <div class="form-group d-flex">
+                <div class="form-group col-2 m-3">
+                    <label  class="col-form-label ">Cantidad:</label>
+                    <input id="_cant" class="form-control" asp-for="Cantidad" />
+                </div>
+                <div class="form-group col-2 m-3">
+                    <label class="col-form-label ">Precio total:</label>
+                    <input id="precio" class="form-control" asp-for="Precio" readonly />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <a asp-action="IndexU" asp-controller="Productos" type="button" class="btn btn-secondary">Cancelar</a>
+                <input type="submit" value="Generar" class="btn orange text-white" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        <img src="data:image/jpeg;base64,@Convert.ToBase64String(ViewBag.Img)" class="card-img-top MaxSize-img" alt="...">
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/pedidoscreate.js"></script>
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

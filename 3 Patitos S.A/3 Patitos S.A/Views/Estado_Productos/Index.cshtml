@@ -1,0 +1,132 @@
+﻿@model _3_Patitos_S.A.Models.Estado_Productos
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Show Estados-->
+<div class=" row mb-5">
+    <div class="offset-12">
+        <div class="card border">
+            <div class=" d-flex card-header bg-black justify-content-between ">
+                <h4 class="text-white"><strong>Estados de los Productos</strong></h4>
+                <button type="button" class="btn orange m-1 btn-sm text-white" data-bs-toggle="modal" data-bs-target="#CreateModal"><i class="bi bi-plus-circle"></i> Agregar Estado</button>
+
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="tblEProductos" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nombre del estado</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ep in ViewBag.ListEstados)
+                            {
+                                <tr>
+                                    <td>@ep.ID_Estado</td>
+                                    <td>@ep.Nombre_estado</td>
+                                    <td class=" d-flex justify-content-end">
+                                        <button type="button" onclick="EditEProducto(@ep.ID_Estado)" class="btn btn-warning m-1 btn-sm" data-bs-toggle="modal"><i class="bi bi-pencil-square"></i> Editar</button>
+                                        <button type="button" onclick="DelConfirm(@ep.ID_Estado)" class="btn btn-danger m-1 btn-sm" data-bs-toggle="modal" data-bs-target="#DeleteModal"><i class="bi bi-trash3"></i> Eliminar</button>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Create Estados-->
+<div class="modal fade" id="CreateModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-black text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Agregar Estado</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Create" asp-controller="Estado_Productos" method="post">
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label class="col-form-label">Nombre del estado</label>
+                        <input asp-for="Nombre_estado" class="form-control" type="text" />
+                        <span asp-validation-for="Nombre_estado" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn orange text-white">Agregar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Edit Estados-->
+<div class="modal fade" id="EditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-black text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Editar Estado</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Update" method="post">
+                <div class="modal-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input asp-for="ID_Estado" class="form-control" id="_id" hidden />
+
+                    <div class="form-group">
+                        <label class="col-form-label">Nombre del estado</label>
+                        <input asp-for="Nombre_estado" class="form-control" id="_nombre" type="text" />
+                        <span asp-validation-for="Nombre_estado" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-warning">Guardar cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Estados-->
+<div class="modal fade" id="DeleteModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-black text-white">
+                <h5 class="modal-title" id="staticBackdropLabel">Eliminar Estado</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form asp-action="Delete" method="post">
+                <div class="modal-body">
+                    <input id="_ide" class="form-control" asp-for="ID_Estado" name="id" hidden />
+                    ¿Está seguro de eliminar el estado del producto?
+                    @if (ViewData["Error"] != null)
+                    {
+                        <span class="text-danger">@ViewData["Error"]</span>
+                    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" value="Delete" class="btn btn-danger">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/estadoproductos.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

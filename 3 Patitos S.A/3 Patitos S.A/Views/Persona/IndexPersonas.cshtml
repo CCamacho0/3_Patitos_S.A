@@ -17,6 +17,7 @@
                                 <th>Id de la Persona</th>
                                 <th>Rol </th>
                                 <th>Nombre Completo</th>
+                                <th>Fecha de nacimiento</th>
                                 <th>Direccion</th>
                                 <th>Telefono</th>
                                 <th>Correo</th>
@@ -32,6 +33,7 @@
                                     <td>@p.Id_Persona </td>
                                     <td>@p.Nombre_Rol</td>
                                     <td>@p.Nombre_Persona</td>
+                                    <td>@p.Fecha_Nacimiento.ToString("dd/MM/yyyy")</td>
                                     <td>@p.Direccion</td>
                                     <td>@p.Telefono</td>
                                     <td>@p.Correo</td>
@@ -78,60 +80,33 @@
 <div class="modal fade" id="EditModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-black text-white">
                 <h5 class="modal-title" id="staticBackdropLabel">Editar Persona</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+
             </div>
             <form asp-action="Update" asp-controller="Persona" method="post">
                 <div class="modal-body">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                    <div class="form-group">
-                        <label class="col-form-label">Id de la Persona</label>
-                        <input class="form-control" asp-for="Id_Persona" type="number" id="id_persona" readonly />
-                    </div>
-
-                    <div class="form-group">
+                    <div class="form-group col-5 m-3">
                         <label class="col-form-label">Seleccione el Rol</label>
                         @Html.DropDownListFor(r => r.Id_Rol, (SelectList)ViewBag.ListRol, new { @class = "form-select", @id="id_r" })
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-form-label">Nombre Completo</label>
-                        <input asp-for="Nombre_Persona" id="nombre" class="form-control" type="text"/>
-                        <span asp-validation-for="Nombre_Persona" class="text-danger"></span>
+                    <div class="form-group col-5 m-3">
+                        <label class="col-form-label ">Seleccione la Categoria</label>
+                        @Html.DropDownListFor(r => r.Id_Categoria, (SelectList)ViewBag.Categoria, new { @class = "form-select", @id="id_c" })
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-form-label">Dirección</label>
-                        <textarea id="dir" class="form-control" asp-for="Direccion">></textarea>
-                        <span asp-validation-for="Direccion" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-form-label">Numero de Telefono</label>
-                        <input id="telefono" class="form-control" asp-for="Telefono" type="number" />
-                        <span asp-validation-for="Telefono" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-form-label">Correo</label>
-                        <input id="email" class="form-control" asp-for="Correo" type="email" />
-                        <span asp-validation-for="Correo" class="text-danger"></span>
-                    </div>
-                    <div class="form-group d-flex">
-                        <div class="form-group col-5 m-3">
-                            <label class="col-form-label">Seleccione el estado</label>
-                            @Html.DropDownListFor(r => r.Id_Estado_Usuario, (SelectList)ViewBag.EstadoUsuario, new { @class = "form-select", @id="id_e" })
-                        </div>
-
-                        <div class="form-group col-5 m-3">
-                            <label class="col-form-label ">Seleccione la Categoria</label>
-                            @Html.DropDownListFor(r => r.Id_Categoria, (SelectList)ViewBag.Categoria, new { @class = "form-select", @id="id_c" })
-                        </div>
-                    </div>
-
-                    <input id="contrasena" class="form-control" asp-for="Contrasena" type="password" hidden />
+                    <input id="contrasena" asp-for="Contrasena" type="password" hidden />
+                    <input id="id_e" asp-for="Id_Estado_Usuario" hidden />
+                    <input id="_fecha" asp-for="Fecha_Nacimiento" type="text" hidden  />
+                    <input id="id_persona" asp-for="Id_Persona" type="number" hidden />
+                    <input id="nombre" asp-for="Nombre_Persona" type="text" hidden />
+                    <textarea id="dir" asp-for="Direccion" hidden></textarea>
+                    <input id="telefono" asp-for="Telefono" type="number" hidden />
+                    <input id="email" asp-for="Correo" type="email" hidden />
 
                 </div>
                 <div class="modal-footer">
@@ -143,3 +118,10 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+    <script src="~/js/personas.js"></script>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
