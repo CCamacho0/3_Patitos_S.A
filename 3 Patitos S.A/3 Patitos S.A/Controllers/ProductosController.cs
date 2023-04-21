@@ -60,13 +60,21 @@ namespace _3_Patitos_S.A.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID_Producto,Nombre_producto,Fecha_ingreso,Fecha_egreso,Cantidad,ID_Estado,Precio,Id_Ubicacion")] Productos productos)
         {
-            if (ModelState.IsValid)
+            try
             {
-                _context.Add(productos);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (ModelState.IsValid)
+                {
+                    _context.Add(productos);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
+                return View(productos);
             }
-            return View(productos);
+            catch(Exception ex)
+            {
+                ViewData["Error"] = ex.Message;
+                return View();
+            }
         }
 
         // GET: Productos/Edit/5

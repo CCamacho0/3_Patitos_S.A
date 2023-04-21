@@ -165,24 +165,31 @@ namespace _3_Patitos_S.A.Controllers
             persona.Id_Rol = 1;
             persona.Id_Estado_Usuario = 1;
             persona.Id_Categoria = 1;
-
-            if (ModelState.IsValid && persona.Contrasena != null)
+            try
             {
-
-                if (persona.Contrasena.Equals(password))
-                    persona.Contrasena = ConvertContrasena(password);
-
-                else
+                if (ModelState.IsValid && persona.Contrasena != null)
                 {
-                    ViewData["Error"] = "Las contraseñas no coinciden";
-                    return View(persona);
-                }
 
-                _context.Persona.Add(persona);
-                _context.SaveChanges();
-                return RedirectToAction("Index", "Home");
+                    if (persona.Contrasena.Equals(password))
+                        persona.Contrasena = ConvertContrasena(password);
+
+                    else
+                    {
+                        ViewData["Error"] = "Las contraseñas no coinciden";
+                        return View(persona);
+                    }
+
+                    _context.Persona.Add(persona);
+                    _context.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
+                return View(persona);
             }
-            return View(persona);
+            catch (Exception ex)
+            {
+                ViewData["Error"] = ex.Message;
+                return View();
+            }
         }
 
         [FiltroAutenticacion]
@@ -190,33 +197,41 @@ namespace _3_Patitos_S.A.Controllers
         {
             object? persona = null;
             string? userJson = HttpContext.Session.GetString("User");
-            if (userJson != null)
+            try
             {
-                user = JsonSerializer.Deserialize<Persona>(userJson, options);
+                if (userJson != null)
+                {
+                    user = JsonSerializer.Deserialize<Persona>(userJson, options);
 
-                var getpersona = from p in _context.Persona
-                                 join r in _context.Rol on p.Id_Rol equals r.Id_Rol
-                                 join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
-                                 where p.Id_Persona == user.Id_Persona
-                                 select new
-                                 {
-                                     p.Id_Persona,
-                                     r.Nombre_Rol,
-                                     p.Nombre_Persona,
-                                     p.Direccion,
-                                     p.Telefono,
-                                     p.Correo,
-                                     c.Nombre_categoria
-                                 };
-                ViewBag.Persona = getpersona.ToList();
+                    var getpersona = from p in _context.Persona
+                                     join r in _context.Rol on p.Id_Rol equals r.Id_Rol
+                                     join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
+                                     where p.Id_Persona == user.Id_Persona
+                                     select new
+                                     {
+                                         p.Id_Persona,
+                                         r.Nombre_Rol,
+                                         p.Nombre_Persona,
+                                         p.Direccion,
+                                         p.Telefono,
+                                         p.Correo,
+                                         c.Nombre_categoria
+                                     };
+                    ViewBag.Persona = getpersona.ToList();
 
-                persona = _context.Persona.Find(user.Id_Persona);
+                    persona = _context.Persona.Find(user.Id_Persona);
 
-                if (persona == null)
-                    return NotFound();
+                    if (persona == null)
+                        return NotFound();
+                }
+
+                return View(persona);
             }
-                
-            return View(persona);
+            catch(Exception e)
+            {
+                ViewData["Error"] = e.Message;
+                return View();
+            }
         }
     }
 }

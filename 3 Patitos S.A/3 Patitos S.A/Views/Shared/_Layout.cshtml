@@ -40,10 +40,12 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="#" asp-action="#">Pedidos</a></li>
+                        @if (user != null)
+                        {
+                            <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="#" asp-action="#">Pedidos</a></li>
+                            <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a></li>
+                        }
                         <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Info">Acerca de nosotros</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="Index">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="Productos" asp-action="IndexU">Ver Productos</a></li>
                         @if (user != null && user.Id_Rol == 2 || user != null && user.Id_Rol == 3)@*Empleado de invenatarios y administrador*@
                         {
                             <li class="nav-item"><a class="nav-link text-dark" asp-area="" asp-controller="#" asp-action="#">Inventario</a></li>

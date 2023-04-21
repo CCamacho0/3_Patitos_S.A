@@ -52,6 +52,10 @@
                 <input asp-for="Id_Ubicacion" class="form-control" />
                 <span asp-validation-for="Id_Ubicacion" class="text-danger"></span>
             </div>
+            @if (ViewData["Error"] != null)
+            {
+                <span class="text-danger">@ViewData["Error"]</span>
+            }
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
