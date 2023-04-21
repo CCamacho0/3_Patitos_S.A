@@ -41,15 +41,15 @@ namespace _3_Patitos_S.A.Controllers
         [FiltroAutenticacion]
         public IActionResult Create(Productos productos)
         {
-            if(productos.Img != null)
-            {
-                using Stream fs = productos.Img.OpenReadStream();
-                BinaryReader binaryReader = new(fs);
-                using BinaryReader br = binaryReader;
-                productos.Imagen = br.ReadBytes((int)fs.Length);
-            }
             try
             {
+                if (productos.Img != null)
+                {
+                    using Stream fs = productos.Img.OpenReadStream();
+                    BinaryReader binaryReader = new(fs);
+                    using BinaryReader br = binaryReader;
+                    productos.Imagen = br.ReadBytes((int)fs.Length);
+                }
                 if (ModelState.IsValid)
                 {
                     _context.Add(productos);
@@ -82,21 +82,29 @@ namespace _3_Patitos_S.A.Controllers
         [FiltroAutenticacion]
         public IActionResult Update(Productos productos)
         {
-            if (productos.Img != null)
+            try
             {
-                using Stream fs = productos.Img.OpenReadStream();
-                BinaryReader binaryReader = new(fs);
-                using BinaryReader br = binaryReader;
-                productos.Imagen = br.ReadBytes((int)fs.Length);
-            }
+                if (productos.Img != null)
+                {
+                    using Stream fs = productos.Img.OpenReadStream();
+                    BinaryReader binaryReader = new(fs);
+                    using BinaryReader br = binaryReader;
+                    productos.Imagen = br.ReadBytes((int)fs.Length);
+                }
 
-            if (ModelState.IsValid)
-            {
-                _context.Entry(productos).State = EntityState.Modified;
-                _context.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    _context.Entry(productos).State = EntityState.Modified;
+                    _context.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+                return View(productos);
             }
-            return View(productos);
+            catch (Exception ex)
+            {
+                ViewData["Error"] = ex.Message;
+                return View();
+            }
         }
 
         [HttpPost]

@@ -36,6 +36,10 @@
                             <label class="col-form-label mx-1 d-block">Detalle:</label>
                             <label class="col-form-label">@p.Detalles</label>
                         </div>
+                        @if (ViewData["Error"] != null)
+                        {
+                            <span class="text-danger">@ViewData["Error"]</span>
+                        }
                         <a class="btn orange text-white m-1 btn-sm" asp-area="" asp-controller="Pedidos" asp-action="Create" asp-route-id="@p.ID_Producto">Realizar pedido</a>
                     </div>
                 </div>

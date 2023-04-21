@@ -201,28 +201,32 @@ namespace _3_Patitos_S.A.Controllers
                 {
                     user = JsonSerializer.Deserialize<Persona>(userJson, options);
 
-                var getpersona = from p in _context.Persona
-                                 join r in _context.Rol on p.Id_Rol equals r.Id_Rol
-                                 join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
-                                 where p.Id_Persona == user.Id_Persona
-                                 select new
-                                 {
-                                     p.Id_Persona,
-                                     r.Nombre_Rol,
-                                     p.Nombre_Persona,
-                                     p.Fecha_Nacimiento,
-                                     p.Direccion,
-                                     p.Telefono,
-                                     p.Correo,
-                                     c.Nombre_categoria
-                                 };
-                ViewBag.Persona = getpersona.ToList();
+                    var getpersona = from p in _context.Persona
+                                     join r in _context.Rol on p.Id_Rol equals r.Id_Rol
+                                     join c in _context.Categoria on p.Id_Categoria equals c.Id_categoria
+                                     where p.Id_Persona == user.Id_Persona
+                                     select new
+                                     {
+                                         p.Id_Persona,
+                                         r.Nombre_Rol,
+                                         p.Nombre_Persona,
+                                         p.Fecha_Nacimiento,
+                                         p.Direccion,
+                                         p.Telefono,
+                                         p.Correo,
+                                         c.Nombre_categoria
+                                     };
+                    ViewBag.Persona = getpersona.ToList();
+                    return View();
+                }
+                else
+                    return NotFound();
+            }
+            catch (Exception ex)
+            {
+                ViewData["Error"] = ex.Message;
                 return View();
             }
-            else
-                return NotFound();
-
-
         }
     }
 }
