@@ -24,7 +24,6 @@
 });
 
 var DeleteCat = function (id) {
-    alert(id)
     $("#_idc").val(id);
 }
 

@@ -77,7 +77,7 @@
                     <div class="form-group d-flex">
                         <div class="form-group col-5 m-3">
                             <label class="col-form-label">Cantidad</label>
-                            <input asp-for="Cantidad" class="form-control" type="number" />
+                            <input asp-for="Cantidad" class="form-control" type="number" min="1" />
                             <span asp-validation-for="Cantidad" class="text-danger"></span>
                         </div>
 
@@ -153,7 +153,7 @@
                     <div class="form-group d-flex">
                         <div class="form-group col-5 m-3">
                             <label class="col-form-label">Cantidad</label>
-                            <input asp-for="Cantidad" class="form-control" id="_cant" type="number" />
+                            <input asp-for="Cantidad" class="form-control" id="_cant" type="number" min="1" />
                             <span asp-validation-for="Cantidad" class="text-danger"></span>
                         </div>
 

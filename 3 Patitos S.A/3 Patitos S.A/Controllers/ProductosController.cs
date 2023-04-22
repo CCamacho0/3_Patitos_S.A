@@ -32,7 +32,7 @@ namespace _3_Patitos_S.A.Controllers
         }
         public ActionResult IndexU()
         {
-            ViewBag.ProductosList = _context.Productos.ToList();
+            ViewBag.ProductosList = _context.Productos.Where(p => p.ID_Estado != 4).ToList();
             return View();
         }
 
@@ -110,9 +110,9 @@ namespace _3_Patitos_S.A.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [FiltroAutenticacion]
-        public IActionResult Delete(Productos? productos)
+        public IActionResult Delete(int id)
         {
-            var producto = _context.Productos.Find(productos.ID_Producto);
+            var producto = _context.Productos.Find(id);
 
             if (producto != null)
             {

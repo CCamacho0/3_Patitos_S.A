@@ -1,5 +1,4 @@
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\appsettings.Development.json
-D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\appsettings.json
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\3 Patitos S.A.staticwebassets.runtime.json
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\3 Patitos S.A.exe
 D:\CCD\1-U\1- Noveno Cuatrimestre\3- Arquitectura de softaware aplicada\Proyecto\3_Patitos_S.A\3 Patitos S.A\3 Patitos S.A\bin\Debug\net6.0\3 Patitos S.A.deps.json

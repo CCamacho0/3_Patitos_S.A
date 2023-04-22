@@ -82,7 +82,7 @@
                 <div class="form-group d-flex">
                     <div class="form-group col-5 m-3">
                         <label class="col-form-label ">Cantidad</label>
-                        <input id="cant" class="form-control" asp-for="Cantidad"/>
+                        <input id="cant" class="form-control" asp-for="Cantidad" type="number" min="1" />
                         @if (ViewData["Error"] != null)
                         {
                             <span class="text-danger">@ViewData["Error"]</span>
