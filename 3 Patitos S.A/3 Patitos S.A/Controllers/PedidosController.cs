@@ -117,16 +117,24 @@ namespace _3_Patitos_S.A.Controllers
         {
             var pedidos = new Pedidos();
             var producto = _context.Productos.Find(id);
+            var descuento = 0m;
             if (producto != null)
             {
-
-                var va3 = 0.13;
+                string? userJson = HttpContext.Session.GetString("User");
+                if (userJson != null)
+                {
+                    user = JsonSerializer.Deserialize<Persona>(userJson, options);
+                    int id_categoria = _context.Persona.Find(user.Id_Persona).Id_Categoria;
+                    descuento = producto.Precio * _context.Categoria.Find(id_categoria).Descuento;
+                }
+                    
+                var va3 = 0.13m;
                 var iva = (int)producto.Precio * va3;
 
                 pedidos.ID_Producto = id;
                 ViewBag.Nombre = producto.Nombre_producto.ToString();
                 ViewBag.Img = producto.Imagen;
-                ViewBag.Precio = (int)producto.Precio+iva;
+                ViewBag.Precio = ((int)producto.Precio+iva) - descuento;
             }
 
 
